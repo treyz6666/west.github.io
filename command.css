@@ -1,0 +1,457 @@
+* {
+    user-select: none;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, Arial, sans-serif;
+    color: white;
+    background-color: black;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Общие стили для хедера */
+
+header {
+    width: 100%;
+    position: relative;
+    background-color: black;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: relative;
+    padding: 10px; 
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+    margin-left: 30px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 17px;
+}
+nav a.main {
+  
+    margin-right: 90px;
+}
+
+
+nav a.sotrud {
+    font-weight: 600;
+}
+
+nav a:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+
+.icons {
+    display: flex;
+    gap: 10px;
+    margin: 35px;
+}
+
+.icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icons img:hover {
+    opacity: 0.7;
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content, .process, .why {
+    opacity: 0;
+    transform: translateY(20px); 
+}
+
+.content.visible, .process.visible, .why.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    user-select: none;
+}
+
+#burger-toggle {
+    display: none;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    max-width: 100%;
+    margin: 0;
+    background-image: url('svj/sotrudbg.svg');
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 580px; 
+    margin-right: 45px;
+    margin-top: -25px;
+
+}
+
+
+.hero h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    max-width: 63%;
+    flex: 1;
+    margin-left: 60px;
+    font-size: 47px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 85%;
+    font-family: Montserrat;
+}
+
+.hero p {
+    font-size: 19px;
+    max-width: 541px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    margin-right: 30px;
+    color: #FFF;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 60px;
+    font-family: Montserrat;
+}
+.hero p1{
+    font-size: 19px;
+    max-width: 541px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    margin-right: 30px;
+    color: #FFF;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 60px;
+    font-family: Montserrat;
+}
+.prem {
+    font-family: Montserrat;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 85.02%;
+    margin-left: 60px;
+}
+
+
+
+.benefit-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    padding-left: 50px; 
+}
+
+.benefit-item p {
+    font-size: 19px;
+    opacity: 0.8;
+    padding-left: 50px;
+}
+    .press-icon {
+        width: 342px;
+        height: auto;
+    
+        margin-left: 25px;
+        animation: pulse 2s infinite ease-in-out;
+    }
+    
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 20px 0px;
+    text-align: left;
+    max-width: 1350px;
+    margin: 0 auto;
+    font-family: Montserrat;
+  
+
+}
+/* Футер */
+.footer {
+    background: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Montserrat;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.footer-info {
+    display: flex;
+    gap: 40px;
+    align-items: left;
+}
+
+.footer-item span {
+    font-size: 14px;
+    color: gray;
+}
+
+.footer-item p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+.footer-center h3 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Montserrat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-right: 30px;
+}
+
+.footer-icons a img {
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+}
+
+.hr1 {
+    border: none;
+    height: 1px;
+    background: #1C1C1C;
+    width: 90%;
+    margin: 0 auto 20px;
+}
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px; 
+    display: flex;
+    font-family: Montserrat;
+    font-weight: bold;
+
+}
+
+.press-icon {
+    height: auto;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    * {
+        user-select: none;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Montserrat, Arial, sans-serif;
+        color: white;
+        background-color: black;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    header {
+        width: 100%;
+        position: relative;
+    }
+
+    .header-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 80px;
+        height: auto;
+    }
+
+
+    #burger-toggle:checked + label.burger + nav {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.5s ease-in-out;
+    }
+    
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        justify-content: center;
+        top: 80px;
+        left: 0;
+        background: #000;
+        z-index: 10;
+        opacity: 0;
+        transform: translateY(-30px);
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 10px;
+        display: block;
+        text-align: center;
+        opacity: 0;
+        animation: fadeInUp 0.5s ease-out forwards;
+    }
+    nav a:nth-child(1) {
+        animation-delay: 0.2s;
+    }
+
+    nav a:nth-child(2) {
+        animation-delay: 0.3s;
+    }
+
+    nav a:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    nav a:nth-child(4) {
+        animation-delay: 0.5s;
+    }
+
+    nav a:nth-child(5) {
+        animation-delay: 0.6s;
+    }
+
+    nav a:nth-child(6) {
+        animation-delay: 0.7s;
+    }
+    .icons {
+        display: flex;
+        gap: 10px;
+        margin: 10px;
+    }
+
+    .icons img {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        user-select: none;
+    }
+
+    #burger-toggle {
+        display: none;
+    }
+
+    #burger-toggle:checked + label.burger + nav {
+        display: flex;
+    }
+    /* Hero секция */
+
+    .benefits {
+        display: block;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px;
+        padding: 20px 0px;
+ 
+        max-width: 1350px;
+        margin: 0 auto;
+        font-family: Montserrat;
+    }
+
+    .prem {
+        font-family: Montserrat;
+  
+    }
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 15px; 
+        display: flex;
+        font-family: Montserrat;
+        font-weight: bold;
+    
+    }
+}
+

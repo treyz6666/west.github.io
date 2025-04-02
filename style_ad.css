@@ -1,0 +1,605 @@
+* {
+    user-select: none;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, Arial, sans-serif;
+    color: white;
+    background-color: black;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    position: relative;
+    background-color: black;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: relative;
+    padding: 10px; 
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+    margin-left: 30px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 17px;
+}
+
+nav a.ad {
+    font-weight: 600;
+}
+nav a.main {
+  
+    margin-right: 90px;
+}
+nav a:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+
+.icons {
+    display: flex;
+    gap: 10px;
+    margin: 35px;
+}
+
+.icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icons img:hover {
+    opacity: 0.7;
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content, .process, .why {
+    opacity: 0;
+    transform: translateY(20px); 
+}
+
+.content.visible, .process.visible, .why.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    user-select: none;
+}
+
+#burger-toggle {
+    display: none;
+}
+
+.hero {
+    margin-top: 50px;
+    background-image: url('svj/ad.svg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay h1 {
+    background: none;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    font-size: 40px;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    max-width: 63%;
+    flex: 1;
+    font-size: 47px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 85%;
+    font-family: Montserrat;
+}
+
+.hero p {
+    margin-top: -30px;
+    max-width: 541px;
+}
+
+
+.content, .process, .why {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.content h2 {
+    margin-top: 60px;
+    font-size: px;
+    width: 40%;
+    padding-bottom: 10px;
+    font-size: 32px; /* Установите размер шрифта */
+}
+
+.content p {
+    max-width: 541px;
+    font-size: 19px;
+    width: 60%;
+    margin-top: -10px;
+}
+
+.process {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 30px;
+    align-items: flex-start; 
+}
+.process img:first-child {
+    max-width: 60%;
+    height: auto;
+    margin-right: 0px; 
+    margin-top: -30px;
+    animation: pulse 2s infinite ease-in-out; 
+}
+
+.process div { 
+    width: 60%;
+}
+
+.process h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-top: -30px;
+    margin-bottom: 60px;
+
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8; 
+    }
+    100% {
+        transform: scale(1); 
+        opacity: 1;
+    }
+}
+
+
+.process img:last-child { 
+    max-width: 100%;
+    height: auto;
+    margin-left: 100px;
+    margin-top: -30px;
+
+}
+
+.process img {
+    max-width: 100%; 
+    height: auto;
+    margin: 10px 0;
+    margin-left: -40px;
+
+}
+
+.process ul {
+    width: auto;
+    text-align: left;
+}
+
+.why h2 {
+    margin-top: -70px;
+}
+
+.why p {
+    margin-top: -20px;
+    max-width: 610px;
+    font-size: 18px;
+}
+
+h2 {
+    padding-bottom: 10px;
+    font-size: 32px;
+}
+
+ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.footer {
+    background: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Montserrat;
+}
+
+.hr1 {
+    border: none;
+    height: 1px;
+    background: #1C1C1C;
+    width: 90%;
+    margin: 0 auto 20px;
+
+}
+
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.footer-info {
+    display: flex;
+    gap: 40px;
+    align-items: left;
+}
+
+.footer-item span {
+    font-size: 14px;
+    color: gray;
+
+}
+
+.footer-item p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content, .process, .why {
+    opacity: 0; 
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.content.visible, .process.visible, .why.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+
+.footer-center h3 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Montserrat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-right: 30px;
+}
+
+
+
+.footer-icons a img {
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        color: #fff;
+        font-family: Montserrat;
+    }
+    
+    header {
+        width: 100%;
+        position: relative;
+    }
+    
+    .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 10px; 
+    }
+    
+    .logo img {
+        width: 80px;
+        height: auto;
+    }
+
+    .hero h1, .hero p, .hero p1, .prem {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    nav {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        background: #000;
+        z-index: 10;
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-family: Montserrat;
+        font-size: 16px; 
+        padding: 10px;
+        display: block;
+        text-align: center;
+    }
+    
+    nav a.main {
+        margin-right: 0; 
+    }
+    
+    nav a.ad {
+        font-weight: 600;
+    }
+    
+    .icons {
+        display: flex;
+        gap: 10px;
+        margin: 10px;
+    }
+    
+    .icons img {
+        width: 20px; 
+        height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    nav a:hover,
+    .icons img:hover {
+        opacity: 0.7;
+        transition: 0.3s;
+    }
+    
+    .burger {
+        display: block; 
+        cursor: pointer;
+        font-size: 30px;
+        user-select: none;
+    }
+    
+    #burger-toggle {
+        display: none;
+    }
+    
+    #burger-toggle:checked + label.burger + nav {
+        display: flex;
+    }
+    
+    .hero {
+        margin-top: 20px; 
+        background-image: url('svj/ad.svg');
+        background-size: cover;
+        background-position: center;
+        height: 200px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+    
+    .overlay {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .overlay h1 {
+        background: none;
+        padding: 10px;
+        border-radius: 5px;
+        max-width: 90%; 
+        font-size: 24px; 
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-family: Montserrat;
+    }
+    
+    .hero p {
+        margin-top: -10px;
+        max-width: 90%; 
+        font-size: 16px;
+    }
+    
+    .content, .process, .why {
+        padding: 20px; 
+        max-width: 100%; 
+        margin: auto;
+    }
+    
+    .content h2 {
+        margin-top: 30px; 
+        font-size: 24px; 
+        width: 100%; 
+    }
+    
+    .content p {
+        max-width: 100%; 
+        font-size: 16px; 
+        margin-top: -5px;
+    }
+    
+    .process {
+        flex-direction: column; 
+        align-items: center;
+    }
+    
+    .process img:first-child {
+        max-width: 90%; 
+        margin-right: 0;
+        margin-top: 10px;
+    }
+    
+    .process div {
+        width: 100%; 
+    }
+    
+    .process h2 {
+        text-align: center;
+        margin-bottom: 10px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    .process img:last-child {
+        max-width: 90%; 
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    .process img {
+        margin: 5px 0;
+        margin-left: 0;
+    }
+    
+    .process ul {
+        width: 100%; 
+        text-align: left;
+        padding-left: 20px;
+        font-size: 16px; 
+    }
+    
+    .why h2 {
+        margin-top: 10px;
+    }
+    
+    .why p {
+        margin-top: 10px;
+        max-width: 100%; 
+        font-size: 16px; 
+    }
+    
+    h2 {
+        padding-bottom: 5px;
+        font-size: 24px;
+    }
+    
+    ol {
+        list-style-type: decimal;
+        padding-left: 20px;
+        font-size: 16px; 
+    }
+    
+    .footer {
+        padding: 10px 0; 
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; 
+    }
+    
+    .footer-info {
+        flex-direction: column; 
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .footer-item span {
+        font-size: 12px; 
+    }
+    
+    .footer-item p {
+        font-size: 14px; 
+    }
+    
+    .footer-center h3 {
+        font-size: 16px; 
+        margin-right: 0;
+    }
+    
+    .footer-icons a img {
+        width: 20px; 
+        height: 20px;
+        margin-left: 10px;
+    }
+}

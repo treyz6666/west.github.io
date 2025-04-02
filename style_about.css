@@ -1,0 +1,463 @@
+* {
+    user-select: none;
+
+}
+/* Общие стили для body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, Arial, sans-serif;
+    color: white;
+    background-color: black;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+
+/* Общие стили для хедера */
+
+header {
+    width: 100%;
+    position: relative;
+
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    max-width: 100%;
+    margin: 0;
+    background-image: url('svj/fon.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 570px; 
+    margin-right: 45px;
+    margin-top: -25px;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: relative;
+    padding: 10px; 
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+    margin-left: 30px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 17px;
+}
+nav a.main {
+    margin-right: 90px;
+}
+
+
+nav a.about {
+    font-weight: 600;
+}
+
+nav a:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+
+.icons {
+    display: flex;
+    gap: 10px;
+    margin: 35px;
+}
+
+.icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icons img:hover {
+    opacity: 0.7;
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content, .process, .why {
+    opacity: 0;
+    transform: translateY(20px); 
+}
+
+.content.visible, .process.visible, .why.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    user-select: none;
+    z-index: 2;
+}
+
+#burger-toggle {
+    display: none;
+}
+
+/* Стили для hero секции */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.principles .decor {
+    width: 100%;
+    max-width: 1400px; /* Увеличиваем максимальную ширину */
+    height: auto;
+    margin-top: 15px;
+}
+
+
+.hero .content {
+    max-width: 50%;
+    z-index: 1;
+    text-align: left;
+}
+.content p {
+    max-width: 541px;
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.footer-info {
+    display: flex;
+    gap: 40px;
+    align-items: left;
+}
+
+.footer-item span {
+    font-size: 14px;
+    color: gray;
+
+}
+
+.footer-item p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+
+.footer-center h3 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Montserrat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-right: 30px;
+}
+
+.footer-icons a img {
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+}
+
+
+
+.footer {
+    background: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Montserrat;
+}
+
+.hr1 {
+    border: none;
+    height: 1px;
+    background: #1C1C1C;
+    width: 90%;
+    margin: 0 auto 20px;
+
+}
+
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero .content {
+    opacity: 0;
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 0.1s;
+}
+
+/* Общие стили для мобильных устройств */
+@media (max-width: 768px) {
+    * {
+        user-select: none;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Montserrat, Arial, sans-serif;
+        color: white;
+        background-color: black;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    header {
+        width: 100%;
+        position: relative;
+    }
+
+    .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 80px;
+        height: auto;
+    }
+
+
+    #burger-toggle:checked + label.burger + nav {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.5s ease-in-out;
+    }
+    
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background: #000;
+        z-index: 10;
+        opacity: 0;
+        transform: translateY(-30px);
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 10px;
+        display: block;
+        text-align: center;
+        opacity: 0;
+        animation: fadeInUp 0.5s ease-out forwards;
+    }
+    nav a:nth-child(1) {
+        animation-delay: 0.2s;
+    }
+
+    nav a:nth-child(2) {
+        animation-delay: 0.3s;
+    }
+
+    nav a:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    nav a:nth-child(4) {
+        animation-delay: 0.5s;
+    }
+
+    nav a:nth-child(5) {
+        animation-delay: 0.6s;
+    }
+
+    nav a:nth-child(6) {
+        animation-delay: 0.7s;
+    }
+    .icons {
+        display: flex;
+        gap: 10px;
+        margin: 10px;
+    }
+
+    .icons img {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        user-select: none;
+    }
+
+    #burger-toggle {
+        display: none;
+    }
+
+    #burger-toggle:checked + label.burger + nav {
+        display: flex;
+    }
+    /* Hero секция */
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .hero .background {
+        width: 100%;
+        height: 300;
+        position: static;
+    }
+    
+    .hero .content {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 24px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    /* Principles секция */
+    .principles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .principles h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .principles p {
+        font-size: 16px;
+        max-width: 90%;
+    }
+    
+    .principles .decor {
+        width: 100%;
+        max-width: 600px; /* Увеличиваем максимальную ширину */
+        height: auto;
+        margin-top: 15px;
+    }
+
+
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-item span {
+        font-size: 12px;
+    }
+
+    .footer-item p {
+        font-size: 14px;
+    }
+
+    .footer-center h3 {
+        font-size: 16px;
+        margin-right: 0;
+    }
+
+    .footer-icons a img {
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+    }
+
+}
